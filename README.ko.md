@@ -37,9 +37,10 @@ ln -s ~/todays-design/skills/todays-design ~/.claude/skills/todays-design
 ln -s ~/todays-design/skills/design-init   ~/.claude/skills/design-init
 ln -s ~/todays-design/skills/design-apply  ~/.claude/skills/design-apply
 ln -s ~/todays-design/skills/design-system ~/.claude/skills/design-system
+ln -s ~/todays-design/skills/design-audit  ~/.claude/skills/design-audit
 ```
 
-Claude Code를 재시작하면 4개 스킬이 자동으로 인식됩니다.
+Claude Code를 재시작하면 5개 스킬이 자동으로 인식됩니다.
 
 > **다른 방법:** `~/.claude/plugins/todays-design`에 직접 clone하면 플러그인 방식으로 설치됩니다.
 
@@ -126,6 +127,25 @@ Claude Code를 재시작하면 4개 스킬이 자동으로 인식됩니다.
 
 ---
 
+### `/design-audit`
+
+현재 디자인을 수상작 기준으로 점수 매기고, **우선순위별 개선 로드맵**을 생성합니다.
+
+```
+> /design-audit
+> "내 랜딩페이지 디자인 평가해줘"
+```
+
+6개 항목 (각 1-10점): **컬러 & 대비** · **타이포그래피** · **레이아웃 & 여백** · **컴포넌트** · **비주얼 아이덴티티** · **접근성**
+
+출력:
+- 전체 점수 + 항목별 점수
+- 강점 3개 / 약점 3개
+- 오늘의 수상작과 직접 비교
+- **임팩트 순서 개선 로드맵** (빠른 수정 → 중간 노력 → 대규모 개선)
+
+---
+
 ## DESIGN.md
 
 [Google Stitch](https://stitch.withgoogle.com/) 형식을 따릅니다 — CSS 값 나열이 아닌, AI 에이전트가 이해할 수 있는 자연어 기반 디자인 시스템입니다.
@@ -153,11 +173,12 @@ DESIGN.md
 /design-apply            # "랜딩 페이지 만들어줘"
 ```
 
-**기존 프로젝트에 디자인 시스템 추가:**
+**기존 프로젝트 디자인 개선 (리디자인):**
 ```
-/design-init             # "기존 코드" 선택 → 현재 토큰 추출
-/todays-design           # 오늘의 트렌드 확인
-/design-system           # "오늘의 컬러 방식 적용해줘"
+/design-audit            # 현재 디자인 점수 + 개선 로드맵
+/todays-design           # 수상작은 뭐가 다른지 확인
+/design-system           # 로드맵 기반으로 토큰 업데이트
+/design-apply            # 개선된 토큰으로 컴포넌트 재생성
 ```
 
 **원하는 사이트를 레퍼런스로:**
@@ -187,7 +208,8 @@ todays-design/
 │   ├── todays-design/       # 매일 수상작 가져오기 & 분석
 │   ├── design-init/         # DESIGN.md 생성
 │   ├── design-apply/        # 디자인 기반 코드 생성
-│   └── design-system/       # 디자인 토큰 수정
+│   ├── design-system/       # 디자인 토큰 수정
+│   └── design-audit/        # 디자인 점수 & 개선 로드맵
 ├── templates/
 │   └── DESIGN.md            # 통합 템플릿 (웹 + 모바일)
 ├── examples/

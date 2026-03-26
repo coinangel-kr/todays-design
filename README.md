@@ -37,9 +37,10 @@ ln -s ~/todays-design/skills/todays-design ~/.claude/skills/todays-design
 ln -s ~/todays-design/skills/design-init   ~/.claude/skills/design-init
 ln -s ~/todays-design/skills/design-apply  ~/.claude/skills/design-apply
 ln -s ~/todays-design/skills/design-system ~/.claude/skills/design-system
+ln -s ~/todays-design/skills/design-audit  ~/.claude/skills/design-audit
 ```
 
-Restart Claude Code. All 4 skills will be recognized automatically.
+Restart Claude Code. All 5 skills will be recognized automatically.
 
 > **Alternative:** Clone directly to `~/.claude/plugins/todays-design` for plugin-style install.
 
@@ -126,6 +127,25 @@ Update `DESIGN.md` tokens without rewriting the file.
 
 ---
 
+### `/design-audit`
+
+Score your design against award-winning standards and get a prioritized improvement roadmap.
+
+```
+> /design-audit
+> "Audit my landing page"
+```
+
+Evaluates 6 dimensions (1-10 each): **Color & Contrast** · **Typography** · **Layout & Spacing** · **Components** · **Visual Identity** · **Accessibility**
+
+Outputs:
+- Overall score with per-dimension breakdown
+- Top 3 strengths and weaknesses
+- Comparison against today's award winner
+- **Prioritized improvement roadmap** (quick wins → medium effort → major upgrades)
+
+---
+
 ## DESIGN.md
 
 Follows [Google Stitch](https://stitch.withgoogle.com/) format — natural language descriptions that AI agents understand, not just raw CSS values.
@@ -153,11 +173,12 @@ Single template for both web and mobile — platform-specific sections activate 
 /design-apply            # "Build a landing page"
 ```
 
-**Add to existing project:**
+**Improve existing design (redesign workflow):**
 ```
-/design-init             # Choose "Existing Code"
-/todays-design           # Get fresh inspiration
-/design-system           # "Adopt today's color approach"
+/design-audit            # Score current design, get roadmap
+/todays-design           # See what award winners do differently
+/design-system           # Update tokens based on roadmap
+/design-apply            # Regenerate components
 ```
 
 **Custom reference:**
@@ -187,7 +208,8 @@ todays-design/
 │   ├── todays-design/       # Fetch & analyze daily winner
 │   ├── design-init/         # Generate DESIGN.md
 │   ├── design-apply/        # Apply design to code
-│   └── design-system/       # Update design tokens
+│   ├── design-system/       # Update design tokens
+│   └── design-audit/        # Score design & improvement roadmap
 ├── templates/
 │   └── DESIGN.md            # Universal template
 ├── examples/
