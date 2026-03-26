@@ -1,0 +1,9 @@
+{
+  "name": "todays-design",
+  "description": "AI design agent that brings today's award-winning designs to your code. Fetches daily winners from Awwwards & CSS Design Awards, analyzes their UI/UX patterns, and generates DESIGN.md for consistent design systems.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Today's Design Contributors"
+  },
+  "license": "MIT"
+}
