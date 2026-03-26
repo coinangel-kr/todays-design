@@ -1,7 +1,6 @@
 ---
 name: todays-design
-description: "Fetch and analyze today's award-winning website designs. Use when user asks for 'today's design', 'todays design', 'daily design', 'design inspiration', 'design reference', 'award winning design', 'design of the day', or mentions wanting fresh design ideas. Also trigger on Korean: '오늘의 디자인', '디자인 레퍼런스', '디자인 영감', '수상작'."
-allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "WebFetch", "WebSearch", "AskUserQuestion"]
+description: "Fetch and analyze today's award-winning website designs for inspiration or as a redesign reference. Use when user asks for 'today's design', 'todays design', 'daily design', 'design inspiration', 'design reference', 'award winning design', 'design of the day', 'what's trending in design', 'show me good designs', 'design ideas', or mentions wanting fresh design ideas before building or redesigning UI. Also trigger when user wants to see examples before a redesign. Korean triggers: '오늘의 디자인', '디자인 레퍼런스', '디자인 영감', '수상작', '디자인 트렌드', '좋은 디자인 보여줘', '디자인 참고', '요즘 디자인'."
 ---
 
 # Today's Design — Fetch Daily Award-Winning Designs

@@ -1,8 +1,7 @@
 ---
 name: design-init
-description: "Initialize a DESIGN.md design system for the current project. Use when user asks to 'create design system', 'design init', 'make DESIGN.md', 'set up design tokens', 'initialize design', or mentions 'DESIGN.md'. Also trigger when user says 'design system setup' or 'design configuration'."
+description: "Initialize a DESIGN.md design system for the current project. Use when user asks to 'create design system', 'design init', 'make DESIGN.md', 'set up design tokens', 'initialize design', 'design system setup', 'design configuration', 'set up project design', or mentions wanting to start a design system from scratch. Also trigger before a redesign when no DESIGN.md exists, or when user says 'I need a design system' or 'extract design from this site'. Korean triggers: '디자인 초기화', '디자인 시스템 만들어', 'DESIGN.md 만들어', '디자인 설정', '디자인 시스템 세팅', '디자인 뽑아줘'."
 argument-hint: "[web|app]"
-allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "WebFetch", "AskUserQuestion", "Skill"]
 ---
 
 # Design Init — Create DESIGN.md for Your Project
@@ -100,44 +99,42 @@ Ask the user how they want to seed their design system:
 
 ## Template Reference (Embedded Fallback)
 
-If templates directory is not found, use this minimal structure:
+If templates directory is not found, use this Stitch-compatible structure:
 
 ```markdown
-# Design System
+# Design System: {Project Title}
 
-## Brand
-- **Name**: {project-name}
-- **Style**: modern
+## 1. Visual Theme & Atmosphere
+Clean, modern aesthetic with balanced whitespace. Professional yet approachable.
 
-## Colors
-### Primary
-- Primary: #3B82F6
-- Primary Light: #60A5FA
-- Primary Dark: #2563EB
+## 2. Color Palette & Roles
+- **Ocean Blue** (#3B82F6) — Primary brand color for CTAs, active states, links
+- **Sky Blue** (#60A5FA) — Lighter primary for hover states and tinted backgrounds
+- **Deep Blue** (#2563EB) — Darker primary for pressed states and emphasis
+- **Snow White** (#FFFFFF) — Page background canvas
+- **Cloud Gray** (#F8FAFC) — Surface color for cards and panels
+- **Ink Black** (#0F172A) — Primary text for headings and body
+- **Slate Gray** (#64748B) — Muted text for captions and placeholders
+- **Silver Line** (#E2E8F0) — Borders and dividers
 
-### Neutral
-- Background: #FFFFFF
-- Surface: #F8FAFC
-- Text Primary: #0F172A
-- Text Secondary: #64748B
-- Border: #E2E8F0
+## 3. Typography Rules
+- **Heading typeface**: Inter — geometric sans-serif, clean and confident
+- **Body typeface**: Inter — same family for visual continuity
+- **Scale**: 1.25 Major Third ratio
 
-## Typography
-- **Heading Font**: Inter
-- **Body Font**: Inter
-- **Base Size**: 16px
+## 4. Component Stylings
+- **Primary buttons**: Solid Ocean Blue, white text, 8px radius, hover deepens to Deep Blue
+- **Cards**: Cloud Gray background, 12px radius, subtle shadow, hover lifts slightly
+- **Inputs**: Bordered with Silver Line, 8px radius, focus ring in Ocean Blue
 
-## Spacing
-- **Base Unit**: 4px
-- **Scale**: 4, 8, 12, 16, 24, 32, 48, 64
+## 5. Layout Principles
+- **Content width**: 1280px max, 768px for reading
+- **Grid**: 12-column, 24px gutters
+- **Spacing base**: 4px unit (4, 8, 16, 24, 32, 48, 64)
+- **Breakpoints**: sm 640px, md 768px, lg 1024px, xl 1280px
 
-## Components
-- **Border Radius**: sm: 4px, md: 8px, lg: 16px
-- **Shadow**: sm: 0 1px 2px rgba(0,0,0,0.05), md: 0 4px 6px rgba(0,0,0,0.1)
-
-## Layout
-- **Max Width**: 1280px
-- **Breakpoints**: sm: 640px, md: 768px, lg: 1024px, xl: 1280px
+## 6. Today's Reference
+(Populated by /todays-design)
 ```
 
 ## Important Notes

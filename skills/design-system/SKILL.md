@@ -1,7 +1,6 @@
 ---
 name: design-system
-description: "Update and manage the DESIGN.md design system file. Use when user asks to 'update design', 'change colors', 'modify design system', 'update DESIGN.md', 'edit design tokens', 'change font', 'update typography', or 'adjust spacing'. Also trigger on Korean: '디자인 시스템 수정', '디자인 변경', '색상 변경', '폰트 변경', '디자인 업데이트'."
-allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "AskUserQuestion"]
+description: "Update and manage the DESIGN.md design system file. Use when user asks to 'update design', 'change colors', 'modify design system', 'update DESIGN.md', 'edit design tokens', 'change font', 'update typography', 'adjust spacing', 'tweak the design', 'swap the palette', or 'use this site's style'. Also trigger when user provides a URL and wants to adopt its colors/fonts into their existing DESIGN.md. Korean triggers: '디자인 시스템 수정', '디자인 변경', '색상 변경', '폰트 변경', '디자인 업데이트', '색깔 바꿔', '폰트 바꿔', '디자인 수정', '디자인 토큰 변경'."
 ---
 
 # Design System — Manage DESIGN.md
