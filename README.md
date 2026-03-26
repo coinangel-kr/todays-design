@@ -10,6 +10,9 @@
     <a href="#designmd">DESIGN.md</a> &middot;
     <a href="#workflows">Workflows</a>
   </p>
+  <p align="center">
+    <b>English</b> | <a href="README.ko.md">한국어</a>
+  </p>
 </p>
 
 ---
@@ -17,8 +20,6 @@
 Every day, sites like [Awwwards](https://www.awwwards.com/) and [CSS Design Awards](https://www.cssdesignawards.com/) pick award-winning websites. **Today's Design** brings those designs into your development workflow — it fetches the winner, analyzes its design system (colors, typography, layout, components), and helps you apply those patterns to your own project through a `DESIGN.md` file.
 
 Inspired by [Google Stitch](https://stitch.withgoogle.com/)'s `DESIGN.md` — a portable design system that AI agents can read. The twist: **your reference updates daily** from real award-winning sites.
-
-매일 Awwwards, CSS Design Awards 같은 플랫폼에서 수상하는 웹사이트를 가져와 디자인 시스템을 분석하고, `DESIGN.md`를 통해 프로젝트에 적용합니다. Google Stitch의 DESIGN.md 컨셉에서 영감을 받았으며, **매일 실제 수상작 기반으로 레퍼런스가 자동 갱신**되는 것이 핵심입니다.
 
 ```
 /todays-design  →  /design-init  →  /design-apply  →  Your beautiful app
@@ -49,8 +50,6 @@ Restart Claude Code. All 4 skills will be recognized automatically.
 ### `/todays-design`
 
 Fetch and analyze today's award-winning website.
-
-오늘의 수상작 웹사이트를 가져와 분석합니다.
 
 1. Check cache → 2. Fetch Awwwards RSS (or CSSDA fallback) → 3. Visit winning site → 4. Extract design tokens → 5. Output structured analysis → 6. Cache for reuse
 
@@ -88,16 +87,14 @@ Fetch and analyze today's award-winning website.
 
 ### `/design-init`
 
-Create a `DESIGN.md` for your project.
-
-프로젝트에 `DESIGN.md` 디자인 시스템을 생성합니다.
+Create a `DESIGN.md` for your project. Choose a source:
 
 | Source | Description |
 |--------|-------------|
-| Today's Design | Base on today's award winner (recommended) |
-| Existing Code | Extract from your CSS / Tailwind / theme files |
-| Blank Template | Start clean |
-| Custom URL | Use any website as reference |
+| **Today's Design** | Base on today's award winner (recommended) |
+| **Existing Code** | Extract from your CSS / Tailwind / theme files |
+| **Blank Template** | Start clean |
+| **Custom URL** | Use any website as reference |
 
 Auto-detects your framework: Next.js, React, Vue, Svelte, Angular, React Native, Flutter.
 
@@ -105,9 +102,7 @@ Auto-detects your framework: Next.js, React, Vue, Svelte, Angular, React Native,
 
 ### `/design-apply`
 
-Generate styled code using `DESIGN.md` + today's design.
-
-`DESIGN.md`와 오늘의 디자인을 기반으로 스타일된 코드를 생성합니다.
+Generate styled code using `DESIGN.md` + today's design reference.
 
 ```
 > /design-apply
@@ -122,8 +117,6 @@ Supports: **Tailwind** · **CSS Variables** · **styled-components / emotion** �
 
 Update `DESIGN.md` tokens without rewriting the file.
 
-`DESIGN.md`의 디자인 토큰을 부분 수정합니다.
-
 ```
 > "Change primary color to purple"
 > "Switch heading font to Poppins"
@@ -137,8 +130,6 @@ Update `DESIGN.md` tokens without rewriting the file.
 
 Follows [Google Stitch](https://stitch.withgoogle.com/) format — natural language descriptions that AI agents understand, not just raw CSS values.
 
-Google Stitch 형식을 따릅니다 — CSS 값이 아닌 AI가 이해할 수 있는 자연어 기반 디자인 시스템입니다.
-
 ```
 DESIGN.md
 ├── 1. Visual Theme & Atmosphere
@@ -149,9 +140,7 @@ DESIGN.md
 └── 6. Today's Reference   (Daily award-winning design)
 ```
 
-Single template for both web and mobile — platform-specific sections activate based on your project.
-
-웹과 모바일 모두 단일 템플릿 — 프로젝트 타입에 따라 플랫폼별 섹션이 활성화됩니다.
+Single template for both web and mobile — platform-specific sections activate based on your project type.
 
 ---
 
